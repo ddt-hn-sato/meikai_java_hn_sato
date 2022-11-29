@@ -50,6 +50,8 @@ public class ensyu06_14{
 		
 		//1-12の乱数を生成
 		int randomMonth = 1 + randomInstance.nextInt(12);
+		//次の問題の変数を宣言しておく
+		int randomMonthRe;
 
 		//入力値を代入する変数guessingMonthを宣言
 		String guessingMonth;
@@ -68,7 +70,14 @@ public class ensyu06_14{
 				//一致するので「正解」とする
 				System.out.println("正解！");
 				//もし次回行うとして、次回用の問題を作成しておく
-				randomMonth = 1 + randomInstance.nextInt(12);
+				randomMonthRe = 1 + randomInstance.nextInt(12);
+				
+				//この問題が前回と被らないかどうか調査し、被らないようにしてから
+				while(randomMonthRe == randomMonth) {
+					randomMonthRe = 1 + randomInstance.nextInt(12);
+				}
+				//randomMothにrandomMonthReを代入
+				randomMonth = randomMonthRe;
 			} else 
 				System.out.println("おしい！");
 			//もう一度問題を解きたいかどうか
