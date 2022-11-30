@@ -105,8 +105,24 @@ public class ensyu06_19{
 			System.out.printf("%9f", sumAverage[lineNumber - 1][1]);
 			System.out.print(" |");
 			
+			//総計の計算のためsumScoreへ合計値を合算していく
+			sumScore += sumAverage[lineNumber - 1][0];
+			//総計の計算のためaverageScoreへ平均値を合算していく
+			averageScore += sumAverage[lineNumber - 1][1];
+			
 			//行の出力が終わるたびに改行
 			System.out.println();
 		}
+		//総計を表示
+		System.out.println("-----+----------+----------+");
+		System.out.print(" 総計|");
+		
+		//合計値の総計
+		System.out.printf("%9f", sumScore);
+		System.out.print(" |");
+		//平均値の総計
+		System.out.printf("%9f", averageScore);
+		System.out.print(" |");
+		
 	}
 }
