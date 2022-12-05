@@ -13,14 +13,14 @@
  *  
  * パッケージ名:ensyu07_20
  * クラス名:ensyu07_20
- * 作成日:2022/12/●
+ * 作成日:2022/12/5
  * 作成者:HinaSato
  * 修正日:
  * 修正者:
  * ver:1.0.0
  */
 
-package workspace0;
+package workspace0.chapter07_archive_11to20;
 
 //Scannerクラスをインポート
 import java.util.Scanner;
