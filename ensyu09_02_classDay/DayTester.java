@@ -79,6 +79,8 @@ public class DayTester {
 			int year = standardInput.nextInt();
 			//②インスタンスを生成
 			Day yearMonthDateOld = new Day(year);
+			//日付表現を表示する
+			System.out.println("yearMonthDate = " + yearMonthDateOld);
 			
 			// - - - 月を入力するかどうか
 			System.out.print("月を入力しますか？[ YES = 1, NO = 0 ]：");
@@ -92,6 +94,8 @@ public class DayTester {
 				int month = standardInput.nextInt();
 				//③インスタンスをnewで新たに生成
 				yearMonthDateOld = new Day(year, month);
+				//日付表現を表示する
+				System.out.println("yearMonthDate = " + yearMonthDateOld);
 				
 				// - - - 日にちを入力するかどうか
 				System.out.print("日を入力しますか？[ YES = 1, NO = 0 ]：");
@@ -105,9 +109,11 @@ public class DayTester {
 					int date = standardInput.nextInt();
 					//④インスタンスをnewで新たに生成
 					yearMonthDateOld = new Day(year, month, date);
+					//日付表現を表示する
+					System.out.println("yearMonthDate = " + yearMonthDateOld);
 					
 					//上書きさせる
-					System.out.print("年月日をすべて上書きしましょう。（年月日をすべて入力すること）");
+					System.out.println("年月日をすべて上書きしましょう。（年月日をすべて入力すること）");
 						
 					//もとの日付表現を表示する
 					System.out.println("旧 yearMonthDate = " + yearMonthDateOld.toString());
@@ -128,18 +134,21 @@ public class DayTester {
 					//セッタで、新しいほうを上書きする
 					yearMonthDateNew.set(yearNew, monthNew, dateNew);
 					
-					//日付表現を表示する
-					System.out.print("新 yearMonthDate = " + yearMonthDateNew);
+					//新しいほうの日付表現を表示する
+					System.out.println("新 yearMonthDate = " + yearMonthDateNew);
 					
 					//もとの日付と、新しい日付を比較
 					if (yearMonthDateOld.equalTo(yearMonthDateNew)){
-						System.out.print("二つの年月日は同じです。上書きしても変わらないが、上書きします。");
+						System.out.println("二つの年月日は同じです。上書きしても変わらないが、上書きします。");
 					} else {
-						System.out.print("二つの年月日は違います。上書きします。");
+						System.out.println("二つの年月日は違います。上書きします。");
 					}
 					
 					//セッタで、古いほうも上書きする
 					yearMonthDateOld.set(yearNew, monthNew, dateNew);
+					
+					//古いほうの日付表現を表示する
+					System.out.println("旧 yearMonthDate を上書きしました = " + yearMonthDateOld);
 					}
 				}
 			}
