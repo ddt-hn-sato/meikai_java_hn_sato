@@ -40,7 +40,7 @@ public class ensyu15_02{
 		//String型の文字列リテラルの内部は、char型の文字リテラルを要素とする配列なので、この配列を
 		//インデックスの0から最大値まで走査し表示、さらに文字コードに置換のうえ表示もさせる
 		for (int i = 0; i < encodingString.length(); i++) {
-			//その文字自体を1文字ずつ表示させる。char型の配列のインデックス1の値を、String型のインスタンス経由で取ってきている
+			//その文字自体を1文字ずつ表示させる。char型の配列のインデックスiの値を、String型のインスタンス経由で取ってきている
 			System.out.print("「" + encodingString.charAt(i) + "」の文字コードは→");
 			//文字コードを表示させる
 			System.out.println(encodingString.codePointAt(i));
