@@ -35,7 +35,7 @@ public class ensyu15_02{
 		//入力値で変数を初期化
 		String encodingString = standardInput.next();
 		
-		//逆さにした旨文字列を表示
+		//文字コードを表示する説明
 		System.out.println("▼1文字ずつ、文字コードを表示します▼");
 		//String型の文字列リテラルの内部は、char型の文字リテラルを要素とする配列なので、この配列を
 		//インデックスの0から最大値まで走査し表示、さらに文字コードに置換のうえ表示もさせる
