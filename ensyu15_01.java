@@ -39,7 +39,7 @@ public class ensyu15_01{
 		//文字列リテラルの内部は、char型の文字リテラルを要素とする配列なので、この配列を
 		//インデックスの最大値から0まで走査し、逆から表示させる
 		for (int i = (reversibleString.length() - 1); i >= 0  ; i--) {
-			//表示させる。char型の配列のインデックス1の値を、String型のインスタンス経由で取ってきている
+			//表示させる。char型の配列のインデックスiの値を、String型のインスタンス経由で取ってきている
 			System.out.print(reversibleString.charAt(i));
 		}
 	}
